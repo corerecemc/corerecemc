@@ -1,0 +1,144 @@
+```html
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COREREC - electronic music creations</title>
+
+    <style>
+        /* --- GLOBAL --- */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+        }
+
+        /* --- HEADER / NAVIGATION --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            backdrop-filter: blur(12px);
+            background: rgba(20, 20, 20, 0.55);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+
+        /* Logo (Text COREREC) */
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        /* Menu */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            transition: 0.25s;
+        }
+
+        /* Hover Effekt */
+        nav ul li a:hover {
+            color: #00aaff;
+        }
+
+        /* --- SOCIAL ICONS --- */
+        .social-icons {
+            display: flex;
+            gap: 18px;
+            align-items: center;
+        }
+
+        .social-icons img {
+            width: 28px;
+            height: 28px;
+            object-fit: contain;
+            filter: invert(100%);
+            transition: transform 0.25s ease;
+        }
+
+        /* Hover Zoom Effekt */
+        .social-icons img:hover {
+            transform: scale(1.35);
+        }
+
+        /* --- CONTENT SECTION --- */
+        .section {
+            padding: 120px 40px 60px;
+            text-align: center;
+        }
+
+        .section img {
+            width: 80%;
+            max-width: 900px;
+            display: block;
+            margin: 30px auto;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">COREREC</div>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#music">Music</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="social-icons">
+        <a href="https://facebook.com" target="_blank">
+            <img src="icons/facebook.svg" alt="Facebook">
+        </a>
+        <a href="https://instagram.com" target="_blank">
+            <img src="icons/instagram.svg" alt="Instagram">
+        </a>
+        <a href="https://youtube.com" target="_blank">
+            <img src="icons/youtube.svg" alt="YouTube">
+        </a>
+    </div>
+</header>
+
+<div class="section" id="home">
+    <h1>Welcome to COREREC</h1>
+    <p>Electronic music creations — dark, industrial, atmospheric.</p>
+    <img src="img/landing1.jpg" alt="Landing Image 1">
+</div>
+
+<div class="section" id="music">
+    <h1>Music</h1>
+    <p>Explore my releases, projects and sound experiments.</p>
+    <img src="img/landing2.jpg" alt="Landing Image 2">
+</div>
+
+<div class="section" id="contact">
+    <h1>Contact</h1>
+    <p>For bookings, collaborations or label inquiries.</p>
+    <img src="img/landing3.jpg" alt="Landing Image 3">
+</div>
+
+</body>
+</html>
+```
