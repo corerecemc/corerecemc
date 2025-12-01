@@ -1,3 +1,16 @@
+# COREREC – electronic music creations
+
+Dies ist die offizielle Website für **COREREC** – ein elektronisches Musikprojekt mit Fokus auf düsterem, industriellem und cineastischem Sound.
+
+Die Seite ist als **statische HTML/CSS-Website** aufgebaut und kann direkt über GitHub Pages veröffentlicht werden.
+
+---
+
+## 📄 index.html
+
+Hier ist der vollständige Code der Website:
+
+```html
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -18,7 +31,6 @@
             color: #fff;
             font-family: "Arial", sans-serif;
             overflow-x: hidden;
-            scroll-behavior: auto; /* verhindert scroll animation beim laden */
         }
 
         /* --- Header / Navigation --- */
@@ -66,7 +78,6 @@
             display: flex;
             align-items: center;
             gap: 18px;
-            height: 100%;
         }
 
         .social-icons img {
@@ -97,11 +108,13 @@
 
         .image-block {
             width: 100%;
+            text-align: center;
             margin: 30px 0;
         }
 
         .image-block img {
             width: 100%;
+            max-width: 1200px;
             border-radius: 12px;
         }
 
@@ -140,7 +153,7 @@
     </style>
 </head>
 
-<body id="top">
+<body>
 
     <!-- HEADER -->
     <header>
@@ -213,15 +226,6 @@
     <footer>
         © 2025 COREREC – All rights reserved.
     </footer>
-
-    <!-- Scroll to top on load robust -->
-    <script>
-    window.onload = function() {
-        // Direkt auf den oberen Rand scrollen
-        document.documentElement.scrollTop = 0;
-        document.body.scrollTop = 0;
-    };
-    </script>
 
 </body>
 </html>
