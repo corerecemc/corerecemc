@@ -1,231 +1,144 @@
-# COREREC – electronic music creations
-
-Dies ist die offizielle Website für **COREREC** – ein elektronisches Musikprojekt mit Fokus auf düsterem, industriellem und cineastischem Sound.
-
-Die Seite ist als **statische HTML/CSS-Website** aufgebaut und kann direkt über GitHub Pages veröffentlicht werden.
-
----
-
-## 📄 index.html
-
-Hier ist der vollständige Code der Website:
-
 ```html
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COREREC - electronic music creations</title>
 
     <style>
-        /* --- Global Reset --- */
-        * {
+        /* --- GLOBAL --- */
+        body {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background: #0b0b0b;
+            font-family: Arial, sans-serif;
+            background: #0a0a0a;
             color: #fff;
-            font-family: "Arial", sans-serif;
-            overflow-x: hidden;
         }
 
-        /* --- Header / Navigation --- */
+        /* --- HEADER / NAVIGATION --- */
         header {
             position: fixed;
             top: 0;
+            left: 0;
             width: 100%;
-            height: 110px;
-            background: rgba(255, 255, 255, 0.10);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            height: 80px;
+            backdrop-filter: blur(12px);
+            background: rgba(20, 20, 20, 0.55);
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 0 40px;
-            z-index: 2000;
+            box-sizing: border-box;
+            z-index: 1000;
         }
 
+        /* Logo (Text COREREC) */
         .logo {
             font-size: 28px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            color: #fff;
+            font-weight: bold;
+            letter-spacing: 2px;
         }
 
-        .main-menu ul {
-            display: flex;
-            gap: 30px;
+        /* Menu */
+        nav ul {
             list-style: none;
+            display: flex;
+            gap: 25px;
         }
 
-        .main-menu a {
+        nav ul li a {
             text-decoration: none;
             color: #fff;
             font-size: 18px;
-            transition: color 0.25s ease;
+            transition: 0.25s;
         }
 
-        .main-menu a:hover {
-            color: #ff0055;
+        /* Hover Effekt */
+        nav ul li a:hover {
+            color: #00aaff;
         }
 
-        /* --- Social Icons --- */
+        /* --- SOCIAL ICONS --- */
         .social-icons {
             display: flex;
-            align-items: center;
             gap: 18px;
+            align-items: center;
         }
 
         .social-icons img {
-            width: 30px;
-            height: 30px;
+            width: 28px;
+            height: 28px;
             object-fit: contain;
-            transition: transform 0.2s ease;
-            filter: invert(1);
+            filter: invert(100%);
+            transition: transform 0.25s ease;
         }
 
+        /* Hover Zoom Effekt */
         .social-icons img:hover {
-            transform: scale(1.3);
+            transform: scale(1.35);
         }
 
-        /* --- Sections Layout --- */
-        section {
-            width: 100%;
-            max-width: 1400px;
-            margin: 150px auto 80px auto;
-            padding: 0 40px;
-        }
-
-        section h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        .image-block {
-            width: 100%;
+        /* --- CONTENT SECTION --- */
+        .section {
+            padding: 120px 40px 60px;
             text-align: center;
-            margin: 30px 0;
         }
 
-        .image-block img {
-            width: 100%;
-            max-width: 1200px;
+        .section img {
+            width: 80%;
+            max-width: 900px;
+            display: block;
+            margin: 30px auto;
             border-radius: 12px;
-        }
-
-        /* --- Footer --- */
-        footer {
-            text-align: center;
-            padding: 50px 0;
-            font-size: 14px;
-            opacity: 0.6;
-        }
-
-        /* --- Mobile --- */
-        @media (max-width: 768px) {
-            header {
-                height: 90px;
-                padding: 0 20px;
-            }
-
-            .main-menu ul {
-                gap: 20px;
-            }
-
-            .main-menu a {
-                font-size: 16px;
-            }
-
-            .social-icons img {
-                width: 26px;
-                height: 26px;
-            }
-
-            section {
-                padding: 0 20px;
-            }
         }
     </style>
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <div class="logo">COREREC</div>
+<header>
+    <div class="logo">COREREC</div>
 
-        <nav class="main-menu">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#releases">Releases</a></li>
-                <li><a href="#artists">Artists</a></li>
-                <li><a href="#shop">Shop</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#music">Music</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-        <div class="social-icons">
-            <a href="https://facebook.com" target="_blank">
-                <img src="icons/facebook.svg" alt="Facebook">
-            </a>
-            <a href="https://instagram.com" target="_blank">
-                <img src="icons/instagram.svg" alt="Instagram">
-            </a>
-            <a href="https://youtube.com" target="_blank">
-                <img src="icons/youtube.svg" alt="YouTube">
-            </a>
-        </div>
-    </header>
+    <div class="social-icons">
+        <a href="https://facebook.com" target="_blank">
+            <img src="icons/facebook.svg" alt="Facebook">
+        </a>
+        <a href="https://instagram.com" target="_blank">
+            <img src="icons/instagram.svg" alt="Instagram">
+        </a>
+        <a href="https://youtube.com" target="_blank">
+            <img src="icons/youtube.svg" alt="YouTube">
+        </a>
+    </div>
+</header>
 
-    <!-- SECTIONS -->
-    <section id="home">
-        <h2>Welcome to COREREC</h2>
-        <div class="image-block">
-            <img src="images/home.jpg" alt="Home Image">
-        </div>
-        <p>Electronic music creations – hard, dark, industrial, cinematic.</p>
-    </section>
+<div class="section" id="home">
+    <h1>Welcome to COREREC</h1>
+    <p>Electronic music creations — dark, industrial, atmospheric.</p>
+    <img src="img/landing1.jpg" alt="Landing Image 1">
+</div>
 
-    <section id="releases">
-        <h2>Latest Releases</h2>
-        <div class="image-block">
-            <img src="images/releases.jpg" alt="Releases">
-        </div>
-        <p>Here you will find all EPs, singles and collaborations.</p>
-    </section>
+<div class="section" id="music">
+    <h1>Music</h1>
+    <p>Explore my releases, projects and sound experiments.</p>
+    <img src="img/landing2.jpg" alt="Landing Image 2">
+</div>
 
-    <section id="artists">
-        <h2>Artists</h2>
-        <div class="image-block">
-            <img src="images/artists.jpg" alt="Artists">
-        </div>
-        <p>The creators behind the COREREC sound.</p>
-    </section>
-
-    <section id="shop">
-        <h2>Shop</h2>
-        <div class="image-block">
-            <img src="images/shop.jpg" alt="Shop">
-        </div>
-        <p>Merch, downloads and more coming soon.</p>
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <div class="image-block">
-            <img src="images/contact.jpg" alt="Contact">
-        </div>
-        <p>For booking, releases or collaborations – get in touch.</p>
-    </section>
-
-    <footer>
-        © 2025 COREREC – All rights reserved.
-    </footer>
+<div class="section" id="contact">
+    <h1>Contact</h1>
+    <p>For bookings, collaborations or label inquiries.</p>
+    <img src="img/landing3.jpg" alt="Landing Image 3">
+</div>
 
 </body>
 </html>
+```
